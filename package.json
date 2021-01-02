@@ -1,0 +1,34 @@
+{
+    "name": "nuxt-express-scaffold",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "cross-env APP_ENV=DEVELOPMENT nodemon ./server/app --watch server",
+        "dev:only-nuxt": "cross-env APP_ENV=DEVELOPMENT nuxt",
+        "one-stop-start:test": "cross-env APP_ENV=TEST nuxt build && cross-env APP_ENV=TEST pm2 startOrReload ./pm2.config.js -i max",
+        "one-stop-start:uat": "cross-env APP_ENV=UAT nuxt build && cross-env APP_ENV=UAT pm2 startOrReload ./pm2.config.js -i max",
+        "one-stop-start:prod": "cross-env APP_ENV=PRODUCTION nuxt build && cross-env APP_ENV=PRODUCTION pm2 startOrReload ./pm2.config.js -i max",
+        "generate": "nuxt generate",
+        "svg": "vsvg -s ./src/icons/svg -t ./src/icons/components --es6"
+    },
+    "author": "tuanzisama",
+    "license": "MIT",
+    "dependencies": {
+        "@nuxtjs/axios": "^5.12.4",
+        "@nuxtjs/dotenv": "^1.4.1",
+        "@nuxtjs/pwa": "^3.0.2",
+        "body-parser": "^1.19.0",
+        "core-js": "^3.6.5",
+        "cross-env": "^7.0.3",
+        "element-ui": "^2.13.2",
+        "express": "^4.17.1",
+        "http-proxy-middleware": "^1.0.6",
+        "lodash": "^4.17.20",
+        "nuxt": "^2.14.6",
+        "vue-svgicon": "^3.2.9"
+    },
+    "devDependencies": {
+        "colors": "^1.4.0",
+        "debug": "^4.3.1",
+        "nodemon": "^2.0.6"
+    }
+}
