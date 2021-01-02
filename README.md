@@ -3,11 +3,12 @@
 ## What can nuxt.js solve?
 - SEO optimization for search engines.
 - Runs on the client in an old version or without a JavaScript engine.
-- The client's network is slow
+- The client's network is slow.
 - ...
 
 ## What did this project do?
-- Integrate `Express` in this project; so you can write `Nodejs` to solve cross-domain issues in the production environment, and other browser-binding questions.
+- Integrate `Express` in this project; so you can write `Nodejs` to solve the problem of browser binding in the production environment.
+- Use `http-proxy-middleware` so you can "freely" cross domains.
 - ...
 
 ## Directory Structure
@@ -69,3 +70,22 @@ yarn one-stop-start:{environment}
 4. Wait for the graceful restart to complete
 
 ```Tips: If an exception occurs, you need to log in to the server to execute "pm2 logs" to view the logs.```
+
+
+## How to configure reverse proxy? (base on Express)
+If your frontend app and the backend API server are not running on the same host, you will need to proxy API requests to the API server during development. This is configurable in `server\proxy\config.js`.
+
+If you want to have more control over the proxy behavior, you can also use an object with `path: options` pairs.
+Consult [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware)  for full options
+
+[Docs](https://github.com/chimurai/http-proxy-middleware#options)
+```
+'/api': {
+    target: '<url>',
+    ws: true,
+    changeOrigin: true
+},
+'/foo': {
+    target: '<other_url>'
+}
+```

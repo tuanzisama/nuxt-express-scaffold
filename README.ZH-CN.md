@@ -7,7 +7,7 @@
 - ...
 
 ## 我们做了什么？
-- 在此项目中集成了 `Express`；这样你可以编写 `Nodejs` 以在生产环境中浏览器存在约束力的问题
+- 在此项目中集成了 `Express`；这样你可以编写 `Nodejs` 以解决在生产环境中浏览器存在约束力的问题
 - 接入 `http-proxy-middleware` 这样可以自由的跨域了
 - ...
 
@@ -71,7 +71,7 @@ yarn one-stop-start:{environment}
 
 Tips: 如果出现异常，需登入服务器执行`pm2 logs`查看日志即可
 
-# 如何配置基于Express的反向代理？
+## 如何配置基于Express的反向代理？
 如果你的前端应用和后端 API 服务器没有运行在同一个主机上，你需要将 API 请求代理到 API 服务器。这个问题可以通过 `server\proxy\config.js` 来配置。
 
 如果你想要更多的代理控制行为，也可以使用一个 `path: options` 成对的对象。完整的选项可以查阅 [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) 。[Docs](https://github.com/chimurai/http-proxy-middleware#options)
