@@ -1,5 +1,7 @@
 # nuxt-express-scaffold
 
+[简体中文 README](./README.ZH-CN.md)
+
 ## What can nuxt.js solve?
 - SEO optimization for search engines.
 - Runs on the client in an old version or without a JavaScript engine.

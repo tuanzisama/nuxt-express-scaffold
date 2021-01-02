@@ -1,4 +1,6 @@
-# Nuxt
+# nuxt-express-scaffold
+
+[English README](./README.md)
 
 ## 为什么使用Nuxt
 - 客户端的网络比较慢
@@ -86,3 +88,6 @@ Tips: 如果出现异常，需登入服务器执行`pm2 logs`查看日志即可
     target: '<other_url>'
 }
 ```
+
+## 欢迎fork项目，提出Issues和PR！
+如果你使用了，或对本项目有建树性的建议，可发送电子邮件至 `tuanzi@hatsunemiku.club` 或前往`Github Discussions`。
