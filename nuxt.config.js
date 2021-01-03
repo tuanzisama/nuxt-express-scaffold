@@ -11,12 +11,6 @@ module.exports = {
                 Object.assign(allowEnv, { [finallyKey]: value })
             }
         })
-        const OwEnv = allowEnv['OVERWRITE_NODE_ENV'] || "N/A"
-        if (env === 'DEVELOPMENT') {
-            console.info('╭──────────────────────────────────────────╮');
-            console.info('│ Nuxt(FE) Really environment: ' + OwEnv);
-            console.info('╰──────────────────────────────────────────╯');
-        }
         return { APP_ENV: env, ...allowEnv }
     })(),
     head: {

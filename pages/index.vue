@@ -43,7 +43,7 @@ export default {
     },
     computed: {
         env() {
-            return process.env.OVERWRITE_NODE_ENV;
+            return process.env.APP_ENV;
         },
     },
     mounted() {

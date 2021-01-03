@@ -9,7 +9,7 @@ require('colors');
 var Env = require('./env');
 
 module.exports = (port) => {
-    var OwEnv = Env('OVERWRITE_NODE_ENV', "N/A");
+    var OwEnv = Env('APP_ENV', "N/A");
     var projectName = '\r\n[' + package.name + ']';
     console.log(projectName.rainbow, ' DONE '.bgCyan.black, `Service has been successfully started in ${OwEnv}. \r\n`);
     console.log('    Server running at:');
