@@ -1,14 +1,11 @@
-// import Vue from 'vue'
 import { Message } from 'element-ui'
-/***
- * axios实例封装
- */
+var contants = require('../utils/common/constant')
+const proxyPrefix = contants("REVERSE_PROXY_PREFIX", '/')
 /**
  * request config
  * @param {Boolean} withToken 是否携带Token，默认为true 
  * @param {Boolean} doNotTips 当出现非断网/超时/未知网络错误以外的问题，是否提示错误信息，默认为true
  */
-
 
 export default function ({ $axios: axios }) {
     axios.defaults.baseURL = process.env.BASE_API_URL
@@ -16,9 +13,9 @@ export default function ({ $axios: axios }) {
     axios.defaults.headers = {
         contentType: 'application/json'
     }
-    
+
     axios.proxy = (() => {
-        axios.defaults.baseURL = "/proxy"
+        axios.defaults.baseURL = proxyPrefix
         return axios
     })()
     // response弹窗时间

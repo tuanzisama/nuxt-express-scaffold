@@ -7,7 +7,8 @@ var lodash_get = require('lodash/get')
 
 const _constantList = {
     BASIC_ZINDEX: 3000,
-    REVERSE_PROXY_PREFIX: 'proxy'
+    // 定义反向代理前缀 Define reverse proxy prefix
+    REVERSE_PROXY_PREFIX: '/proxy'
 }
 
 /**

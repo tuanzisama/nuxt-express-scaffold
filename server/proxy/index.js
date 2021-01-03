@@ -4,7 +4,7 @@ var config = require('./config')
 var isPlainObject = require('lodash/isPlainObject')
 var { createProxyMiddleware } = require("http-proxy-middleware");
 var contants = require('../../utils/common/constant')
-const proxyPrefix = contants("REVERSE_PROXY_PREFIX", '')
+const proxyPrefix = contants("REVERSE_PROXY_PREFIX", '/')
 const configList = new Map(Object.entries(config))
 
 if (process.env.APP_ENV === 'DEVELOPMENT') {
@@ -19,7 +19,7 @@ if (process.env.APP_ENV === 'DEVELOPMENT') {
 
 configList.forEach((value, key) => {
     let rewriteConfig = {
-        [`^/${proxyPrefix}${key}`]: '',
+        [`^${proxyPrefix}${key}`]: '',
     }
     value.pathRewrite = isPlainObject(value.pathRewrite) ? Object.assign(value.pathRewrite, rewriteConfig) : rewriteConfig
     router.all([key, `${key}/*`], createProxyMiddleware.call(null, value))
@@ -27,5 +27,5 @@ configList.forEach((value, key) => {
 
 
 module.exports = function (app) {
-    app.use(`/${proxyPrefix}`, router);
+    app.use(proxyPrefix, router);
 }
