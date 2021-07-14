@@ -11,6 +11,9 @@
 ## What did this project do?
 - Integrate `Express` in this project; so you can write `Nodejs` to solve the problem of browser binding in the production environment.
 - Use `http-proxy-middleware` so you can "freely" cross domains.
+- Support IE10.
+- Smooth deployment.
+- Support SVG icon
 - ...
 
 ## Directory Structure
