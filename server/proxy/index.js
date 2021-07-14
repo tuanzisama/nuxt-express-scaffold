@@ -9,8 +9,8 @@ const configList = new Map(Object.entries(config))
 
 if (process.env.APP_ENV === 'DEVELOPMENT') {
     let arr = new Array()
-    let proxyList = configList.forEach((value, key) => {
-        arr.push(`<ul><li><a href="/${proxyPrefix}${key}" target="_blank">${key}</a></li></ul>`)
+    configList.forEach((value, key) => {
+        arr.push(`<ul><li><a href="${proxyPrefix}${key}" target="_blank">${key}</a></li></ul>`)
     })
     router.get('/', function (req, res) {
         res.send(`Reverse proxy started successfully!<br/>${arr.join('')}`)
