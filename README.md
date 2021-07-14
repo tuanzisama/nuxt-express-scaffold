@@ -59,7 +59,7 @@ yarn dev:only-nuxt
 - Yarn@1.22.10 (or NPM)
 - PM2@4.5.1
 - Domain name and trusted SSL certificate `(For safety and ServiceWorker)`
-- NGINX (or Tengine)  `*Optional (For Reverse proxy if needed)`
+- NGINX (or Tengine)  `(*Optional, For Reverse proxy if needed)`
 
 1. After configuring the corresponding Git address on the CI tool, execute the following Shell command in the Executive Shell
 ```
@@ -67,7 +67,7 @@ yarn one-stop-start:{environment}
 ```
 2. Save and execute the build task
 
-3. ObObserve the build console to prevent errors
+3. Observe the build console to prevent errors
 
 4. Wait for the graceful restart to complete
 
