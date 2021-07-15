@@ -17,7 +17,6 @@ The perfect solution, scaffold for nuxt and express. 🛠
 - Smooth deployment
 - Support SVG icon
 - Support PWA
-- ...
 
 ## Directory Structure
 ```
