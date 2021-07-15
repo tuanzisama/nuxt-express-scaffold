@@ -1,5 +1,7 @@
 # nuxt-express-scaffold
 
+🛠 基于 Express 的 NuxtJS 脚手架解决方案。
+
 [English README](./README.md)
 
 ## 为什么使用Nuxt
@@ -8,12 +10,12 @@
 - 利于搜索引擎的SEO优化
 - ...
 
-## 我们做了什么？
+## 此脚手架集成了什么？
 - 在此项目中集成了 `Express`；这样你可以编写 `Nodejs` 以解决在生产环境中浏览器存在约束力的问题
 - 接入 `http-proxy-middleware` 这样可以自由的跨域了
 - 支持 IE10
 - 支持 部署时平滑重启
-- 支持 svg文件转图标组件
+- 支持 SVG 文件转图标组件
 - 支持 PWA
 - ...
 
@@ -39,6 +41,9 @@
     └─pwa           //   注册Service-Worker
 ```
 
+# 配置环境变量
+
+在这个脚手架中，环境变量与 Vue CLI 配置相同。具体参照此 [链接](https://cli.vuejs.org/zh/guide/mode-and-env.html#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F) 所述。
 
 ## 如何运行在开发环境？
 
@@ -80,7 +85,7 @@ Tips: 如果出现异常，需登入服务器执行`pm2 logs`查看日志即可
 ## 如何配置基于Express的反向代理？
 如果你的前端应用和后端 API 服务器没有运行在同一个主机上，你需要将 API 请求代理到 API 服务器。这个问题可以通过 `server\proxy\config.js` 来配置。
 
-如果你想要更多的代理控制行为，也可以使用一个 `path: options` 成对的对象。完整的选项可以查阅 [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) 。[Docs](https://github.com/chimurai/http-proxy-middleware#options)
+如果你想要更多的代理控制行为，也可以使用一个 `path: options` 成对的对象。完整的选项可以查阅 [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) 。
 
 ```
 '/api': {
@@ -94,4 +99,4 @@ Tips: 如果出现异常，需登入服务器执行`pm2 logs`查看日志即可
 ```
 
 ## 欢迎fork项目，提出Issues和PR！
-如果你使用了，或对本项目有建树性的建议，可发送电子邮件至 `tuanzi@hatsunemiku.club` 或前往`Github Discussions`。
+如果你使用了，或对本项目有建树性的建议，可发送电子邮件至 `tuanzi@hatsunemiku.club` 或前往 `Github Discussions`。

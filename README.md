@@ -1,20 +1,22 @@
 # nuxt-express-scaffold
 
+The perfect solution, scaffold for nuxt and express. 🛠
+
 [简体中文 README](./README.ZH-CN.md)
 
 ## What can nuxt.js solve?
-- SEO optimization for search engines.
-- Runs on the client in an old version or without a JavaScript engine.
-- The client's network is slow.
+- SEO optimization for search engines
+- Runs on the client in an old version or without a JavaScript engine
+- The client's network is slow
 - ...
 
 ## What did this project do?
-- Integrate `Express` in this project; so you can write `Nodejs` to solve the problem of browser binding in the production environment.
-- Use `http-proxy-middleware` so you can "freely" cross domains.
-- Support IE10.
-- Smooth deployment.
+- Integrate `Express` in this project; so you can write `Nodejs` to solve the problem of browser binding in the production environment
+- Use `http-proxy-middleware` so you can "freely" cross domains
+- Support IE10
+- Smooth deployment
 - Support SVG icon
-- ...
+- Support PWA
 
 ## Directory Structure
 ```
@@ -38,6 +40,9 @@
     └─pwa           //   Register Service-Worker
 ```
 
+## Setting Environment Variables
+
+In this scaffolding, the environment variables are the same as the Vue CLI configuration. Please refer to this [link](https://cli.vuejs.org/guide/mode-and-env.html#environment-variables) for details.
 
 ## How to run in the development environment?
 
@@ -81,9 +86,7 @@ yarn one-stop-start:{environment}
 If your frontend app and the backend API server are not running on the same host, you will need to proxy API requests to the API server during development. This is configurable in `server\proxy\config.js`.
 
 If you want to have more control over the proxy behavior, you can also use an object with `path: options` pairs.
-Consult [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware)  for full options
-
-[Docs](https://github.com/chimurai/http-proxy-middleware#options)
+Consult [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) for full options. 
 ```
 '/api': {
     target: '<url>',
